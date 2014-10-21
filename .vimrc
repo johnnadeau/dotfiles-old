@@ -20,3 +20,6 @@ set omnifunc=syntaxcomplete#Complete
 "ruby autocomplete
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
+
+"let me use my mouse to give a window focus
+set mouse=a
