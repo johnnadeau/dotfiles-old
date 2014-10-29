@@ -1,0 +1,9 @@
+[color]
+	ui = true
+[user]
+	name = John Nadeau
+	email = johnnnadeau@gmail.com
+[push]
+	default = simple
+[credential]
+	helper = cache
