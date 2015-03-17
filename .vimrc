@@ -1,9 +1,20 @@
 call pathogen#infect()
 set nocompatible
 syntax on
-filetype plugin indent on
+filetype plugin on
+filetype indent on
+
 " line numbers!
+" start with absolute
 set number
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  end
+endfunc
+noremap <C-\> :call NumberToggle()<CR>
 
 " tabs
 set tabstop=2
@@ -12,19 +23,10 @@ set expandtab
 
 " open nerdtree on start
 " autocmd VimEnter * NERDTree
-
 "toggle nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
-"omni completion
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
-
-" ruby autocomplete
-let g:rubycomplete_buffer_loading = 1
-let g:rubycomplete_rails = 1
-
-" let me use my mouse to give a window focus
+" allow mouse to give a window focus
 set mouse=a
 
 " spell check on markdown files
